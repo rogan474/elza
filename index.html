@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОТКРОЙ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ЭКРАН 1: PIN-КОД -->
+<!-- ЭКРАН 1: PIN-КОД -->
+<section id="screen-pin" class="screen active">
+  <div class="pin-container" id="pinContainer">
+    <h1 class="pin-title">думай думай😝</h1>
+    <p class="pin-subtitle">Подсказка: дата нашего первого поцелуя</p>
+
+    <div class="pin-display" id="pinDisplay">_ _ . _ _ . _ _</div>
+
+    <!-- ⬇⬇⬇ ТУТ ПАРОЛЬ (смотри комментарий ниже) ⬇⬇⬇ -->
+    <button class="btn btn-submit" id="btnSubmitPin">Отправить ❤️</button>
+
+    <div class="keypad" id="keypad">
+      <button data-key="1">1</button>
+      <button data-key="2">2</button>
+      <button data-key="3">3</button>
+      <button data-key="4">4</button>
+      <button data-key="5">5</button>
+      <button data-key="6">6</button>
+      <button data-key="7">7</button>
+      <button data-key="8">8</button>
+      <button data-key="9">9</button>
+      <button class="empty cat-btn" id="catBtn" type="button">
+  <img src="img/cat.png" alt="котик" class="cat-img">
+     </button>
+      <button data-key="0">0</button>
+      <button data-key="del">⌫</button>
+    </div>
+
+    <p class="pin-error" id="pinError"></p>
+  </div>
+</section>
+
+<!-- ЭКРАН 2: КОНВЕРТ -->
+<section id="screen-envelope" class="screen">
+  <div class="envelope-wrapper" id="envelopeWrapper">
+    <div class="envelope" id="envelope">
+      <div class="letter-preview" id="letterPreview">
+        <!-- это уголок письма, который выезжает из конверта -->
+      </div>
+      <div class="envelope-body"></div>
+      <div class="flap"></div>
+      <div class="wax-seal" id="waxSeal">
+  <svg viewBox="0 0 100 100" class="seal-svg" id="sealSvg">
+    <!-- ФОН КРУГА (единый сургуч) -->
+    <circle cx="50" cy="50" r="46" fill="url(#waxGrad)" id="sealBase"/>
+
+    <!-- ОСКОЛОК 1: левая верхняя треть -->
+    <path id="shard1"
+          d="M50,50 L18,22 L4,55 L32,88 Z"
+          fill="url(#waxGrad)"
+          opacity="0"/>
+
+    <!-- ОСКОЛОК 2: правая верхняя треть -->
+    <path id="shard2"
+          d="M50,50 L18,22 L82,22 L96,55 Z"
+          fill="url(#waxGrad)"
+          opacity="0"/>
+
+    <!-- ОСКОЛОК 3: нижняя треть -->
+    <path id="shard3"
+          d="M50,50 L96,55 L50,96 L4,55 Z"
+          fill="url(#waxGrad)"
+          opacity="0"/>
+
+    <!-- ТРЕЩИНЫ (появляются при кликах) -->
+    <path id="crack1"
+          d="M50,10 L47,28 L53,42 L48,55 L52,68 L47,82 L50,92"
+          stroke="#1a0206" stroke-width="1.5" fill="none"
+          opacity="0" stroke-linejoin="round"/>
+
+    <path id="crack2"
+          d="M10,50 L28,47 L42,53 L55,48 L68,52 L82,47 L92,50"
+          stroke="#1a0206" stroke-width="1.5" fill="none"
+          opacity="0" stroke-linejoin="round"/>
+
+    <!-- СЕРДЕЧКО -->
+    <text x="50" y="62" text-anchor="middle"
+          font-size="30" fill="#ffd7d7" id="sealHeart">❤</text>
+
+    <!-- ГРАДИЕНТ СУРГУЧА -->
+    <defs>
+      <radialGradient id="waxGrad" cx="35%" cy="30%">
+        <stop offset="0%"   stop-color="#e04a5d"/>
+        <stop offset="45%"  stop-color="#c92a3d"/>
+        <stop offset="100%" stop-color="#7a1019"/>
+      </radialGradient>
+    </defs>
+  </svg>
+</div>
+  
+    <p class="envelope-hint" id="envelopeHint">Нажми 💌</p>
+  </div>
+</section>
+
+<!-- ЭКРАН 3: ПИСЬМО -->
+<!-- ЭКРАН 3: ПИСЬМО -->
+<section id="screen-letter" class="screen">
+  <!-- Фон НЕ меняем — он наследуется от body -->
+  <div class="letter-stage">
+
+    <div class="paper" id="paper">
+      <!-- Фото влюблённых — воткнуть сюда! -->
+      <div class="paper-photo" id="paperPhoto"></div>
+<div class="peper-inner">
+      <div class="paper-content">
+        <h2 class="letter-heading">Эльзочка 💕</h2>
+        <p class="letter-text" id="letterText">
+  Именно так я тебя записала в самом начале, а сейчас каждую ночь мне желает доброй ночи Солнце мое.
+
+Я никогда не забуду тот вечер, когда я пришла домой, а там была ты. Честно? Я не особо обращала на тебя внимание, но, кажется, уже тогда ты меня зацепила.
+
+Как же много мыслей и страхов было у меня после бара... «А что она делает?», «А что будет, если я напишу?», «Позвать её гулять — не странно ли это для неё?». Я переживала, что не понравлюсь тебе, что ты сочтешь меня странной. В итоге я сама собирала нас всех вместе, чтобы просто еще раз посмотреть на тебя.
+
+Когда мы гуляли, я постоянно рассматривала тебя. С каждым разом находила что-то новое, красивое, манящее: еще одну родинку, веснушку, то, как часто ты моргаешь, как широко улыбаешься. Я не могла отвести взгляд.
+
+А потом, приходя домой, я тайком, чтобы Варя не увидела, заходила на твой канал и «шуршала» там, пока не долистывала до самого начала и обратно. Я рассматривала каждую твою фотку, и сердце колотилось просто бешено.
+
+Твоя лучшая шутка — это, конечно, «у тебя спина белая» на первое апреля. Как же я там ахуела! Я шла по улице и представляла, что ты напишешь мне, спросишь, как дела... Но про спину я точно не ожидала. И знаешь, это правда твоя лучшая шутка, ведь после нее всё и началось. Мне хотелось каждый час узнавать, как у тебя дела, искать любые поводы для разговора и просто радовать тебя.
+
+Я влюбилась окончательно. Просто по уши. И мне было так страшно делать что-то дальше. Но мы справились, и 9 ноября мы отмечаем 6 месяцев. Ты прикинь, мы вместе уже полгода!
+
+С тобой мне невероятно комфортно. Я чувствую себя с тобой как дома. Я обожаю просто валяться с тобой на кровати в обнимку и никуда не спешить.
+
+Мы ссоримся, обижаемся и проходим через всё это вместе. Я тебя очень сильно люблю и хочу дальше строить свою жизнь именно с тобой. Преодолеть все преграды, которые стоят на нашем пути, быть рядом и любить друг друга так же, как в первый день. С теми же бабочками в животе, трясучкой перед встречей, желанием... Простым словом — любовью.
+
+А помнишь, как я отправила тебе приглашение «выпить пиво»? Так вот... это почти то же самое, только в этот раз мы будем вдвоем, и я не буду ссыкуном 😉
+
+Еще у меня для тебя заготовлен подарок на 14 ноября, поэтому не планируй ничего на этот день..хихихи 
+
+Люблю тебя
+твоя Ксюша
+
+        </p>
+
+        <div class="letter-buttons">
+          <button id="btnYes" class="btn btn-yes">Да 💖</button>
+          <button id="btnNo" class="btn btn-no">Нет</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ЭКРАН 4: ВЫБОР -->
+<!-- ЭКРАН 4: ВЫБОР -->
+<section id="screen-choose" class="screen">
+  <div class="choose-container">
+
+    <h2 class="choose-title">Отлично! 💫</h2>
+    <p class="choose-subtitle">Давай всё спланируем</p>
+
+    <!-- ШАГ 1: ДАТА -->
+    <div class="choose-step active" id="step-date">
+      <label class="step-label">📅 Когда?</label>
+      <input type="date" id="dateInput" class="pretty-input">
+      <button class="btn-next" id="nextDate">Дальше →</button>
+    </div>
+
+    <!-- ШАГ 2: ВРЕМЯ -->
+    <div class="choose-step" id="step-time">
+      <label class="step-label">⏰ Во сколько?</label>
+      <input type="time" id="timeInput" class="pretty-input">
+      <div class="step-buttons">
+        <button class="btn-back" id="backTime">← Назад</button>
+        <button class="btn-next" id="nextTime">Дальше →</button>
+      </div>
+    </div>
+
+    <!-- ШАГ 3: КУХНЯ -->
+    <div class="choose-step" id="step-cuisine">
+      <label class="step-label">🍽 Какая кухня?</label>
+      <div class="cuisine-grid" id="cuisineGrid">
+        <button class="cuisine-card" data-value="italian">
+          <span class="cuisine-icon">🍝</span>
+          <span class="cuisine-name">Итальянская</span>
+        </button>
+        <button class="cuisine-card" data-value="japanese">
+          <span class="cuisine-icon">🍣</span>
+          <span class="cuisine-name">Японская</span>
+        </button>
+        <button class="cuisine-card" data-value="georgian">
+          <span class="cuisine-icon">🥟</span>
+          <span class="cuisine-name">Грузинская</span>
+        </button>
+        <button class="cuisine-card" data-value="french">
+          <span class="cuisine-icon">🥐</span>
+          <span class="cuisine-name">Французская</span>
+        </button>
+        <button class="cuisine-card" data-value="tatar">
+          <span class="cuisine-icon">🥟</span>
+          <span class="cuisine-name">Татарская</span>
+        </button>
+          <button class="cuisine-card" data-value="custom">
+          <span class="cuisine-icon">💖</span>
+          <span class="cuisine-name">Твое предложение</span>
+        </button>
+      </div>
+      <div class="step-buttons">
+        <button class="btn-back" id="backCuisine">← Назад</button>
+      </div>
+    </div>
+
+    <!-- ШАГ 4: МЕСТО -->
+    <div class="choose-step" id="step-place">
+      <label class="step-label">📍 Куда именно?</label>
+      <div class="place-list" id="placeList"></div>
+      <div class="step-buttons">
+        <button class="btn-back" id="backPlace">← Назад</button>
+      </div>
+    </div>
+
+    <!-- ФИНАЛЬНАЯ КНОПКА -->
+    <button id="btnConfirm" class="btn-confirm" style="display:none;">
+      Подтвердить ✨
+    </button>
+
+  </div>
+</section>
+
+<!-- ЭКРАН 5: ФИНАЛ -->
+<section id="screen-final" class="screen">
+  <div class="final-photo" id="finalPhoto"></div>
+  <h2 class="final-title" id="finalTitle">Выходим туда-то!</h2>
+  <p class="final-details" id="finalDetails"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
